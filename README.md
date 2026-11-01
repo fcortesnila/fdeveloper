@@ -2,6 +2,8 @@
 
 Portfolio frontend built with React, TypeScript, Vite, and Tailwind CSS.
 
+React Router provides Home, Work, Experience, About, and Contact routes. Hash-based URLs keep direct navigation and refreshes compatible with GitHub Pages.
+
 ## Getting started
 
 ```sh
