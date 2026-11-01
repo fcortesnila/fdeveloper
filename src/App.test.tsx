@@ -25,4 +25,16 @@ describe('portfolio routes', () => {
     expect(screen.getByRole('heading', { name: /different systems/i })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: /RBC Wealth management/i })).toBeInTheDocument()
   })
+
+  it('renders the project entries from portfolio data', () => {
+    render(<App />)
+
+    const navigation = within(screen.getByRole('navigation', { name: 'Main navigation' }))
+    fireEvent.click(navigation.getByRole('link', { name: 'Projects' }))
+
+    expect(screen.getByRole('heading', { name: 'Avian Vet' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: 'Phone Book' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: 'Basic Phone Directory API' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: 'Tic Tac Toe in Vue' })).toBeInTheDocument()
+  })
 })
