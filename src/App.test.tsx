@@ -11,7 +11,7 @@ describe('portfolio routes', () => {
   it('shows the portfolio home page', () => {
     render(<App />)
 
-    expect(screen.getByRole('heading', { name: /i build useful software/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /full-stack software/i })).toBeInTheDocument()
     expect(screen.getByRole('navigation', { name: 'Main navigation' })).toBeInTheDocument()
   })
 
