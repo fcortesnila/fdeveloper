@@ -15,3 +15,12 @@ npm run dev
 npm run build
 npm run preview
 ```
+
+## Test and lint
+
+```sh
+npm test
+npm run lint
+```
+
+GitHub Actions runs the test suite, lint, and production build on pushes and pull requests.
