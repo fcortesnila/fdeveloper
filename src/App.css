@@ -40,3 +40,47 @@
 .site-footer p{color:#9aa596}.back-to-top{color:#c4cec1}
 .social-links a{color:#bfd6bd}
 @media(max-width:620px){.main-nav{background:var(--paper);box-shadow:0 14px 20px #0006}}
+
+/* GitHub project showcase visuals */
+.portfolio-visual{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:38px;background-image:radial-gradient(ellipse at 74% 70%,#8fc49a20 0,transparent 39%),linear-gradient(135deg,#17251b,#111b15)}
+.system-map-label,.portfolio-visual>small{position:relative;color:#c5d7c0;font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-align:center}
+.system-map{display:grid;width:min(370px,90%);grid-template-columns:1fr 24px 1fr;align-items:center;gap:14px 8px}
+.system-map span,.system-map b{display:grid;min-height:62px;place-items:center;padding:10px;border:1px solid #71987688;background:#1b2c20;color:#e0eddc;font-size:12px;font-weight:600;text-align:center}
+.system-map i{display:block;height:1px;background:#8fc49a}
+.system-map b{grid-column:1/-1;min-height:50px;border-color:#c58c6380;background:#30241e;color:#f1c3a4;font-weight:500}
+.mini-project-visual{background:#19241b;color:#8fc49a}
+.mini-project-visual>span{border-color:#465747;color:#8fc49a}
+.mini-project-visual .game-x{color:#f09a70}.mini-project-visual .game-o{color:#b1dbad}
+
+/* Custom FCN monogram and wordmark */
+.brand-logo{display:block;width:132px;height:40px;overflow:visible;color:var(--green);transition:color .18s ease}
+.wordmark:hover .brand-logo{color:#b1dbad}
+.brand-subtitle{opacity:.72}
+@media(max-width:620px){.brand-logo{width:118px;height:36px}}
+
+.profile-focus{margin-top:31px;padding:18px 20px;border:1px solid var(--line);background:#151f17}
+.profile-focus .section-kicker{margin-bottom:13px}
+.focus-tags{display:flex;flex-wrap:wrap;gap:8px}
+.focus-tags span{padding:7px 9px;border:1px solid #465847;color:#c8d8c2;font-family:var(--mono);font-size:9px;letter-spacing:.025em}
+
+/* LinkedIn verified experience, education, and recognition */
+.education-card{grid-template-columns:.8fr 1.2fr;align-items:start;gap:20px 30px}
+.education-card .section-kicker{grid-column:1;grid-row:1 / span 2;margin:0}
+.education-item{grid-column:2}
+.education-item h2{margin:0 0 5px;color:#e8eee5;font-size:15px;font-weight:600}
+.education-card .education-item>p{margin:0;color:#b5bfb2;font-size:11px;line-height:1.65}
+.recognition-card{display:grid;grid-template-columns:.8fr 1.2fr;gap:12px 30px;margin-top:34px;padding-top:25px;border-top:1px solid #526052}
+.recognition-card .section-kicker{grid-column:1;grid-row:1 / span 3;align-self:start;margin:0;font-size:9px}
+.recognition-card>p:not(.section-kicker){margin:0;color:#b8c3b5;font-size:11px;line-height:1.6}
+.recognition-card strong{color:#e4ebdf;font-weight:600}
+.profile-source{margin:25px 0 0}
+.profile-source .text-link{color:#d4e58e}
+@media(max-width:620px){.education-card{grid-template-columns:1fr;gap:14px}.education-card .section-kicker,.education-item{grid-column:1;grid-row:auto}.recognition-card{grid-template-columns:1fr;gap:12px}.recognition-card .section-kicker{grid-column:1;grid-row:auto}}
+.secondary-project-link{margin-top:8px;padding-top:3px}
+
+/* Compact, role-focused contact CTA */
+.contact-band-inner{min-height:190px;padding-block:35px}
+.contact-band-copy{margin:12px 0 0;color:#c1d0bd;font-size:12px;line-height:1.6}
+.contact-page h1{max-width:800px}
+@media(max-width:900px){.contact-band-inner{min-height:180px}}
+@media(max-width:620px){.contact-band-inner{min-height:245px;padding-block:34px}.contact-band-copy{font-size:11px}}
