@@ -23,6 +23,6 @@ describe('portfolio routes', () => {
 
     expect(window.location.hash).toBe('#/experience')
     expect(screen.getByRole('heading', { name: /different systems/i })).toBeInTheDocument()
-    expect(screen.getByText(/Wealth management institution/)).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /RBC Wealth management/i })).toBeInTheDocument()
   })
 })
