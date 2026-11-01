@@ -4,14 +4,14 @@ import Arrow from './Arrow'
 import BrandLogo from './BrandLogo'
 
 const navigationItems = [
-  { label: 'Projects', to: '/work' },
+  { label: 'Projects', to: '/projects' },
   { label: 'Experience', to: '/experience' },
   { label: 'About', to: '/about' },
 ]
 
 const routeTitles: Record<string, string> = {
   '/': 'Home',
-  '/work': 'work',
+  '/projects': 'Projects',
   '/experience': 'experience',
   '/about': 'about',
   '/contact': 'contact',

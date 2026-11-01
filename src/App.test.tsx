@@ -32,6 +32,7 @@ describe('portfolio routes', () => {
     const navigation = within(screen.getByRole('navigation', { name: 'Main navigation' }))
     fireEvent.click(navigation.getByRole('link', { name: 'Projects' }))
 
+    expect(window.location.hash).toBe('#/projects')
     expect(screen.getByRole('heading', { name: 'Avian Vet' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'Phone Book' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'Basic Phone Directory API' })).toBeInTheDocument()

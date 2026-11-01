@@ -4,7 +4,7 @@ import PageIntro from '../components/PageIntro'
 import ProjectVisual from '../components/ProjectVisual'
 import { featuredProject, projects } from '../data/projects'
 
-function WorkPage() {
+function ProjectsPage() {
   return <section className="section-wrap routed-page work-page">
     <PageIntro number="01" title={<>Selected projects <em>& experiments.</em></>} subtitle="Proof of practice" />
     <p className="page-lede">Selected public repositories, described from their READMEs. Each card links to the source so you can inspect the implementation and current scope.</p>
@@ -34,4 +34,4 @@ function WorkPage() {
   </section>
 }
 
-export default WorkPage
+export default ProjectsPage
