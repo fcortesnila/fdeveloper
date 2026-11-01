@@ -41,10 +41,10 @@ export const projects: Project[] = [
   },
   {
     number: '03',
-    category: 'BACKEND API',
+    category: 'BACKEND API & AGENT PROTOTYPE',
     title: 'Basic Phone Directory API',
-    description: 'A FastAPI directory API with list, get, create, edit, and delete endpoints. The repo includes field validation, pytest coverage, Docker support, and a GitHub Actions workflow. Storage is in memory and resets on restart.',
-    technologies: ['Python', 'FastAPI', 'pytest', 'Docker', 'GitHub Actions'],
+    description: 'A FastAPI phone directory with list, get, create, PATCH, and delete endpoints, plus an optional OpenAI-backed agent that answers questions and prepares create/update proposals for explicit confirmation. Agent routes require a bearer token, and sharing directory data with OpenAI is opt-in. Core directory routes are unauthenticated and storage is in memory, so this is a local demo for synthetic data—not safe for public exposure or real personal data.',
+    technologies: ['Python', 'FastAPI', 'OpenAI API', 'pytest', 'Docker', 'GitHub Actions'],
     links: [
       { label: 'View source on GitHub', href: 'https://github.com/fcortesnila/basic-api' },
       { label: 'View passing test run', href: 'https://github.com/fcortesnila/basic-api/actions/runs/40998575101', secondary: true },
