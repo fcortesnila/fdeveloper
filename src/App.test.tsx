@@ -38,4 +38,24 @@ describe('portfolio routes', () => {
     expect(screen.getByRole('heading', { name: 'Basic Phone Directory API' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'Tic Tac Toe in Vue' })).toBeInTheDocument()
   })
+
+  it('opens a project as an article with its implementation notes', () => {
+    render(<App />)
+
+    const navigation = within(screen.getByRole('navigation', { name: 'Main navigation' }))
+    fireEvent.click(navigation.getByRole('link', { name: 'Projects' }))
+    fireEvent.click(screen.getAllByRole('link', { name: /read project details/i })[0])
+
+    expect(window.location.hash).toBe('#/projects/avian-vet')
+    expect(screen.getByRole('heading', { name: 'Avian Vet' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: 'A clinic software starting point' })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /all projects/i })).toHaveAttribute('href', '#/projects')
+  })
+
+  it('shows the not-found page for an unknown project', () => {
+    window.location.hash = '#/projects/unknown-project'
+    render(<App />)
+
+    expect(screen.getByRole('heading', { name: /that route isn’t here/i })).toBeInTheDocument()
+  })
 })

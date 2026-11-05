@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import Arrow from '../components/Arrow'
 import FeaturedProjectVisual from '../components/FeaturedProjectVisual'
 import PageIntro from '../components/PageIntro'
@@ -15,6 +16,7 @@ function ProjectsPage() {
         <p>{featuredProject.description}</p>
         <div aria-label="Technologies used" className="tag-list">{featuredProject.technologies.map((technology) => <span key={technology}>{technology}</span>)}</div>
         {featuredProject.links.map((link) => <a className="project-link" href={link.href} key={link.href} rel="noreferrer" target="_blank">{link.label} <Arrow /></a>)}
+        <Link className="project-link project-detail-link" to={`/projects/${featuredProject.slug}`}>Read project details <Arrow /></Link>
       </div>
       <FeaturedProjectVisual />
     </article>
@@ -27,6 +29,7 @@ function ProjectsPage() {
           <p>{project.description}</p>
           <div aria-label="Technologies used" className="tag-list">{project.technologies.map((technology) => <span key={technology}>{technology}</span>)}</div>
           {project.links.map((link) => <a className={`project-link${link.secondary ? ' secondary-project-link' : ''}`} href={link.href} key={link.href} rel="noreferrer" target="_blank">{link.label} <Arrow /></a>)}
+          <Link className="project-link project-detail-link" to={`/projects/${project.slug}`}>Read project details <Arrow /></Link>
         </div>
       </article>
     ))}

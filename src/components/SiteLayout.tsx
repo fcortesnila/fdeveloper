@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router'
 import Arrow from './Arrow'
 import BrandLogo from './BrandLogo'
+import { featuredProject, projects } from '../data/projects'
 
 const navigationItems = [
   { label: 'Projects', to: '/projects' },
@@ -26,7 +27,9 @@ function SiteLayout() {
   useEffect(() => {
     document.documentElement.scrollTop = 0
     document.body.scrollTop = 0
-    const routeName = routeTitles[location.pathname] ?? location.pathname.slice(1)
+    const projectSlug = location.pathname.startsWith('/projects/') ? location.pathname.slice('/projects/'.length) : ''
+    const project = [featuredProject, ...projects].find((entry) => entry.slug === projectSlug)
+    const routeName = routeTitles[location.pathname] ?? project?.title ?? location.pathname.slice(1)
     document.title = `${routeName} | Fernando Cortes Nila — Full-Stack Software Developer`
   }, [location.pathname])
 

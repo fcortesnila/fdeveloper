@@ -84,3 +84,30 @@
 .contact-page h1{max-width:800px}
 @media(max-width:900px){.contact-band-inner{min-height:180px}}
 @media(max-width:620px){.contact-band-inner{min-height:245px;padding-block:34px}.contact-band-copy{font-size:11px}}
+
+.project-backlink{display:inline-flex;margin-bottom:32px;color:#aab8a7;font-size:11px;text-decoration:none}
+.project-backlink:hover{color:var(--orange)}
+.project-detail-header{max-width:790px;margin-bottom:40px}
+.project-detail-header h1{margin:21px 0 15px;font-size:clamp(2.8rem,6vw,4.7rem);font-weight:550;letter-spacing:-.07em;line-height:1}
+.project-detail-intro{margin:0;color:#bac3b7;font-size:15px;line-height:1.85}
+.project-detail-header .tag-list{margin-top:22px}
+.project-detail-grid{display:grid;grid-template-columns:minmax(0,1fr) 260px;align-items:start;gap:32px}
+.project-article{overflow:hidden;border:1px solid var(--line);background:#172019}
+.project-detail-visual .project-visual{min-height:280px}
+.project-detail-visual .mini-project-visual{min-height:280px;padding:48px 25%}
+.project-article-copy{max-width:760px;padding:38px 46px 42px}
+.project-article-copy>section+section{margin-top:32px;padding-top:27px;border-top:1px solid var(--line)}
+.project-article-copy h2,.project-detail-aside h2{margin:0 0 11px;font-size:21px;font-weight:550;letter-spacing:-.04em}
+.project-article-copy p{margin:0;color:#bac3b7;font-size:13px;line-height:1.85}
+.project-article-links{display:flex;flex-direction:column;align-items:flex-start;margin-top:30px;padding-top:16px;border-top:1px solid var(--line)}
+.project-article-links .project-link{margin-top:0;padding-top:12px}
+.project-detail-aside{position:sticky;top:24px;padding:23px;border:1px solid var(--line);background:#151e17}
+.project-detail-aside .section-kicker{margin-bottom:20px}
+.project-detail-category{margin:0 0 27px;color:#aab8a7;font-family:var(--mono);font-size:9px;letter-spacing:.08em;line-height:1.7}
+.project-detail-aside h2{font-size:15px}
+.project-detail-aside ul{display:flex;flex-wrap:wrap;gap:7px;margin:0;padding:0;list-style:none}
+.project-detail-aside li{padding:6px 8px;border:1px solid #3a493b;color:#c0d3bd;font-family:var(--mono);font-size:9px}
+.project-detail-aside .project-link{margin-top:22px;padding-top:0}
+.project-detail-link{margin-top:16px;padding-top:0}
+@media(max-width:900px){.project-detail-grid{grid-template-columns:minmax(0,1fr) 220px;gap:20px}.project-article-copy{padding:30px}}
+@media(max-width:620px){.project-backlink{margin-bottom:25px}.project-detail-header{margin-bottom:28px}.project-detail-header h1{font-size:clamp(2.6rem,12vw,3.8rem)}.project-detail-intro{font-size:13px}.project-detail-grid{grid-template-columns:1fr}.project-detail-aside{position:static;grid-row:1}.project-detail-visual .project-visual,.project-detail-visual .mini-project-visual{min-height:220px}.project-detail-visual .mini-project-visual{padding:30px 20%}.project-article-copy{padding:25px 22px 30px}.project-article-copy h2{font-size:19px}}
