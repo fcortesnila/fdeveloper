@@ -25,4 +25,13 @@ npm test
 npm run lint
 ```
 
-GitHub Actions runs the test suite, lint, and production build on pushes and pull requests.
+## End-to-end tests
+
+Install the Playwright Chromium browser once, then run the browser tests:
+
+```sh
+npx playwright install chromium
+npm run test:e2e
+```
+
+The Playwright config starts the Vite development server automatically. GitHub Actions installs Chromium and runs these tests alongside the unit tests, lint, and production build on pushes and pull requests.
