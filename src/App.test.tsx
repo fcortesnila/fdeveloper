@@ -37,6 +37,7 @@ describe('portfolio routes', () => {
     expect(screen.getByRole('heading', { name: 'Phone Book' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'Basic Phone Directory API' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'Tic Tac Toe in Vue' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: 'FastAPI RAG API' })).toBeInTheDocument()
   })
 
   it('opens a project as an article with its implementation notes', () => {

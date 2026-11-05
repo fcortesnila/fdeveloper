@@ -51,6 +51,8 @@
 .mini-project-visual{background:#19241b;color:#8fc49a}
 .mini-project-visual>span{border-color:#465747;color:#8fc49a}
 .mini-project-visual .game-x{color:#f09a70}.mini-project-visual .game-o{color:#b1dbad}
+.mini-project-visual.rag-visual>span{font-family:var(--mono);font-size:clamp(8px,1vw,12px);font-weight:600;letter-spacing:.03em}
+.mini-project-visual.rag-visual>span:nth-child(3n+2){color:#f09a70}
 
 /* Custom FCN monogram and wordmark */
 .brand-logo{display:block;width:132px;height:40px;overflow:visible;color:var(--green);transition:color .18s ease}

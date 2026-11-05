@@ -24,6 +24,14 @@ const visualContent: Record<ProjectVisualType, { className: string; cells: { tex
       { text: '×', className: 'game-x' }, { text: '○', className: 'game-o' },
     ],
   },
+  rag: {
+    className: 'mini-project-visual rag-visual',
+    cells: [
+      { text: 'TEXT' }, { text: 'EMBED' }, { text: 'CHUNKS' },
+      { text: 'INGEST' }, { text: 'VECTOR' }, { text: 'CHROMA' },
+      { text: 'QUERY' }, { text: 'TOP-K' }, { text: 'SOURCES' },
+    ],
+  },
 }
 
 function ProjectVisual({ type }: { type: Exclude<ProjectVisualType, 'architecture'> }) {

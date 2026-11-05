@@ -23,3 +23,12 @@ test('project articles load directly from their hash route', async ({ page }) =>
   await expect(page.getByRole('heading', { name: 'Basic Phone Directory API', level: 1 })).toBeVisible()
   await expect(page.getByRole('heading', { name: 'An optional agent workflow' })).toBeVisible()
 })
+
+test('the RAG API project page describes retrieval and source passages', async ({ page }) => {
+  await page.goto('/#/projects/fastapi-rag-api')
+
+  await expect(page.getByRole('heading', { name: 'FastAPI RAG API', level: 1 })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Answers with inspectable sources' })).toBeVisible()
+  await expect(page.getByRole('complementary', { name: 'Project details' })).toContainText('ChromaDB')
+  await expect(page.getByRole('article').getByRole('link', { name: 'Review source & RAG API scope' })).toHaveAttribute('href', 'https://github.com/fcortesnila/rag-api')
+})
