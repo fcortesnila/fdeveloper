@@ -53,6 +53,15 @@ describe('portfolio routes', () => {
     expect(screen.getByRole('link', { name: /all projects/i })).toHaveAttribute('href', '#/projects')
   })
 
+  it('shows the RAG API Docker setup and persistent storage details', () => {
+    window.location.hash = '#/projects/fastapi-rag-api'
+    render(<App />)
+
+    expect(screen.getByRole('heading', { name: 'Local and containerized setup' })).toBeInTheDocument()
+    expect(screen.getByText(/Compose exposes the API on port 8000 and stores ChromaDB data in a named volume/)).toBeInTheDocument()
+    expect(within(screen.getByLabelText('Technologies used')).getByText('Docker Compose')).toBeInTheDocument()
+  })
+
   it('shows the not-found page for an unknown project', () => {
     window.location.hash = '#/projects/unknown-project'
     render(<App />)

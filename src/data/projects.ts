@@ -128,7 +128,7 @@ export const projects: Project[] = [
     slug: 'fastapi-rag-api',
     category: 'RETRIEVAL-AUGMENTED GENERATION API',
     title: 'FastAPI RAG API',
-    description: 'A small FastAPI service that indexes text in a local ChromaDB collection and answers questions with relevant passages. Responses include retrieved source chunks and metadata so the generated answer can be inspected and grounded in source material.',
+    description: 'A small FastAPI service that indexes text in a local ChromaDB collection and answers questions with relevant passages. Run it locally or with Docker Compose; responses include retrieved source chunks and metadata so answers can be inspected and grounded in source material.',
     details: [
       {
         heading: 'Ingest, retrieve, and answer',
@@ -139,15 +139,19 @@ export const projects: Project[] = [
         body: 'Query responses include both a generated answer and a sources array with the retrieved text and metadata. The implementation uses a direct FastAPI, OpenAI, and ChromaDB pipeline rather than a RAG framework.',
       },
       {
-        heading: 'Local setup and API key behavior',
-        body: 'The ChromaDB collection is configured for local persistence. The service can start without an OpenAI API key, but /ingest and /query return a clear 503 error until one is configured.',
+        heading: 'Local and containerized setup',
+        body: 'Run the service directly with Python or build it with Docker Compose. Compose exposes the API on port 8000 and stores ChromaDB data in a named volume, preserving the indexed collection across container restarts.',
       },
       {
         heading: 'Test coverage',
         body: 'Tests mock the OpenAI and ChromaDB operations and cover indexing metadata, retrieval options, context passed to generation, response validation, and empty-query validation without making network calls.',
       },
+      {
+        heading: 'API key behavior',
+        body: 'The service can start without an OpenAI API key, but /ingest and /query return a clear 503 error until one is configured.',
+      },
     ],
-    technologies: ['Python', 'FastAPI', 'OpenAI API', 'ChromaDB', 'pytest'],
+    technologies: ['Python', 'FastAPI', 'OpenAI API', 'ChromaDB', 'Docker Compose', 'pytest'],
     links: [{ label: 'Review source & RAG API scope', href: 'https://github.com/fcortesnila/rag-api' }],
     visual: 'rag',
   },
