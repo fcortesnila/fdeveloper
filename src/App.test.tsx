@@ -15,6 +15,15 @@ describe('portfolio routes', () => {
     expect(screen.getByRole('navigation', { name: 'Main navigation' })).toBeInTheDocument()
   })
 
+  it('opens the featured project directly from the home-page headline area', () => {
+    render(<App />)
+
+    fireEvent.click(screen.getByRole('link', { name: 'Explore featured project: Avian Vet' }))
+
+    expect(window.location.hash).toBe('#/projects/avian-vet')
+    expect(screen.getByRole('heading', { name: 'A clinic software starting point' })).toBeInTheDocument()
+  })
+
   it('navigates to the experience section with the router', () => {
     render(<App />)
 

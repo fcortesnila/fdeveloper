@@ -2,6 +2,7 @@ import { Link } from 'react-router'
 import Arrow from '../components/Arrow'
 import ContactBand from '../components/ContactBand'
 import Eyebrow from '../components/Eyebrow'
+import { featuredProject } from '../data/projects'
 
 function HomePage() {
   return <>
@@ -10,6 +11,12 @@ function HomePage() {
         <Eyebrow>Full-stack developer · JavaScript & Node · AI-assisted engineering</Eyebrow>
         <h1>Full-stack software, <em>with an engineer’s eye for systems.</em></h1>
         <p className="hero-intro">I’m a Full Stack Developer at a wealth management institution, following more than two years as a Frontend Developer there. Electronics engineering training and public projects across React, Vue, and Python inform how I approach software from interface to API.</p>
+        <Link aria-label={`Explore featured project: ${featuredProject.title}`} className="featured-project-entry" to={`/projects/${featuredProject.slug}`}>
+          <span className="featured-project-entry-label">Featured project</span>
+          <strong>{featuredProject.title}</strong>
+          <span className="featured-project-entry-summary">Clinic workflows with a cited care-information assistant</span>
+          <Arrow />
+        </Link>
         <div className="hero-actions"><Link className="button button-primary" to="/projects">Explore my work <Arrow /></Link><Link className="text-link" to="/contact">Let’s connect <span>↗</span></Link></div>
         <div className="hero-meta"><span>Software · Systems · Electronics</span></div>
       </div>
