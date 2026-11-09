@@ -17,6 +17,9 @@ type ProjectContent = {
   category: string
   title: string
   description: string
+  purpose: string
+  implemented: string
+  keyTechnologies: string[]
   details: ProjectSection[]
   technologies: string[]
   links: ProjectLink[]
@@ -32,6 +35,9 @@ export const featuredProject: ProjectContent & { visual: 'architecture' } = {
   category: 'FULL-STACK STARTER',
   title: 'Avian Vet',
   description: 'A clinic software starter for appointments and patient records, with a citation-grounded care information assistant. The README describes system boundaries, safety controls, and release gates. The assistant uses a local retrieval baseline with no external model configured; the product is neither clinically validated nor deployed.',
+  purpose: 'A clinic software starter for appointment and patient-record workflows with a cited care-information assistant.',
+  implemented: 'React interface, FastAPI service, MariaDB persistence, and a local retrieval baseline. Not deployed or clinically validated.',
+  keyTechnologies: ['React', 'FastAPI', 'MariaDB', 'Docker Compose'],
   details: [
     {
       heading: 'A clinic software starting point',
@@ -58,6 +64,9 @@ export const projects: Project[] = [
     category: 'CONTACT MANAGEMENT DEMO',
     title: 'Phone Book',
     description: 'Search, add, edit, and delete contacts. The React frontend persists to localStorage; a separate FastAPI service uses SQLite. They are not connected, so their data does not sync. This is a local demo for synthetic data.',
+    purpose: 'A local contact-management demo for browsing and maintaining synthetic contacts.',
+    implemented: 'The React app searches, adds, edits, and deletes contacts in localStorage. A separate FastAPI/SQLite example is included but does not sync with the frontend.',
+    keyTechnologies: ['React', 'Vite', 'FastAPI', 'SQLite'],
     details: [
       {
         heading: 'Contact management in the browser',
@@ -82,6 +91,9 @@ export const projects: Project[] = [
     category: 'BACKEND API & AGENT PROTOTYPE',
     title: 'Basic Phone Directory API',
     description: 'A FastAPI phone directory with list, get, create, PATCH, and delete endpoints, plus an optional OpenAI-backed agent that answers questions and prepares create/update proposals for explicit confirmation. Agent routes require a bearer token, and sharing directory data with OpenAI is opt-in. Core directory routes are unauthenticated and storage is in memory, so this is a local demo for synthetic data—not safe for public exposure or real personal data.',
+    purpose: 'A phone-directory API with an optional assistant for questions and proposed updates.',
+    implemented: 'List/get/create/PATCH/delete endpoints and agent proposals requiring confirmation. Agent access is token-protected; core routes are unauthenticated and storage is in memory, so use synthetic data only.',
+    keyTechnologies: ['Python', 'FastAPI', 'OpenAI API', 'pytest'],
     details: [
       {
         heading: 'Directory endpoints',
@@ -109,6 +121,9 @@ export const projects: Project[] = [
     category: 'EARLIER WEB EXPERIMENT',
     title: 'Tic Tac Toe in Vue',
     description: 'A small browser game built with Vue 3 and the Composition API. The profile also includes an earlier Java terminal version, showing practice across frameworks and interfaces.',
+    purpose: 'A small browser game exploring interactive development with Vue.',
+    implemented: 'Tic Tac Toe in Vue 3 with the Composition API, alongside an earlier Java terminal version.',
+    keyTechnologies: ['Vue 3', 'JavaScript', 'Composition API'],
     details: [
       {
         heading: 'A small browser game',
@@ -129,6 +144,9 @@ export const projects: Project[] = [
     category: 'RETRIEVAL-AUGMENTED GENERATION API',
     title: 'FastAPI RAG API',
     description: 'A small FastAPI service that indexes text in a local ChromaDB collection and answers questions with relevant passages. Run it locally or with Docker Compose; responses include retrieved source chunks and metadata so answers can be inspected and grounded in source material.',
+    purpose: 'A retrieval-augmented API for answering questions using an indexed text collection.',
+    implemented: 'Document ingestion, ChromaDB retrieval, and generated answers with source chunks and metadata; runs locally or through Docker Compose.',
+    keyTechnologies: ['Python', 'FastAPI', 'ChromaDB', 'OpenAI API'],
     details: [
       {
         heading: 'Ingest, retrieve, and answer',
@@ -161,6 +179,9 @@ export const projects: Project[] = [
     category: 'ICE CREAM TRUCK ORDERING & OPERATIONS',
     title: 'Scoop',
     description: 'A full-stack starter for ice-cream truck sales, combining a customer ordering experience with operator tools for orders, inventory, and truck stops. It uses Google sign-in and MariaDB-backed services, with optional AI-powered recommendations.',
+    purpose: 'A mobile-first ordering and operations app for an ice-cream truck.',
+    implemented: 'Flavor browsing, cart and order status, plus operator order and stop workflows, daily summaries, and inventory insights. Optional AI recommendations complement non-AI alerts; this is a starter, not a deployed service.',
+    keyTechnologies: ['React', 'Spring Boot', 'MariaDB', 'Docker Compose', 'Google OAuth', 'AI'],
     details: [
       {
         heading: 'Customer ordering flow',

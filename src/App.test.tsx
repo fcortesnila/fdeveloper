@@ -39,6 +39,18 @@ describe('portfolio routes', () => {
     expect(screen.getByRole('heading', { name: 'Tic Tac Toe in Vue' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'FastAPI RAG API' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'Scoop' })).toBeInTheDocument()
+
+    const projectCards = screen.getAllByRole('article')
+    expect(projectCards).toHaveLength(6)
+    expect(screen.getAllByRole('img')).toHaveLength(6)
+    expect(screen.getByRole('img', { name: 'ASCII illustration of Avian Vet\'s app, care assistant, API, and database' })).toBeInTheDocument()
+    for (const card of projectCards) {
+      const quickRead = within(card)
+      expect(quickRead.getByText('Purpose', { selector: 'dt' })).toBeInTheDocument()
+      expect(quickRead.getByText('Implemented', { selector: 'dt' })).toBeInTheDocument()
+      expect(quickRead.getByText('Key technologies', { selector: 'dt' })).toBeInTheDocument()
+      expect(quickRead.getByRole('list', { name: 'Key technologies' })).toBeInTheDocument()
+    }
   })
 
   it('opens a project as an article with its implementation notes', () => {

@@ -1,44 +1,66 @@
 import type { ProjectVisualType } from '../data/projects'
 
-const visualContent: Record<Exclude<ProjectVisualType, 'scoop'>, { className: string; cells: { text: string; className?: string }[] }> = {
+const visualContent: Record<ProjectVisualType, { label: string; art: string }> = {
   contacts: {
-    className: 'mini-project-visual',
-    cells: [
-      { text: '⌕' }, { text: '＋' }, { text: '✎' }, { text: '⌕' },
-      { text: 'FC' }, { text: '✎' }, { text: '＋' }, { text: 'FC' }, { text: '⌕' },
-    ],
+    label: 'ASCII illustration of a contact book app',
+    art: `  0101 0010 0101 0010 0101
+      .-------------.
+     /  CONTACTS   /|
+    /-------------/ |
+    |  +---------+ | |
+    |  |  o  FC  | | |
+    |  |  o  JD  | | /
+    |  +---------+ |/
+    '-------------'
+     SEARCH / EDIT`,
   },
   api: {
-    className: 'mini-project-visual api-visual',
-    cells: [
-      { text: 'GET' }, { text: '/' }, { text: 'POST' }, { text: 'API' }, { text: '→' },
-      { text: 'UUID' }, { text: 'JSON' }, { text: '✓' }, { text: 'TEST' },
-    ],
+    label: 'ASCII illustration of a phone directory API',
+    art: `  0101 0100 0101 0100 0101
+      .-----------.
+      | DIRECTORY |
+      +-----------+
+      | GET    /  |----.
+      | POST  /+  |--. |
+      | PATCH /id |  | |
+      | DELETE/id |  | |
+      '-----------'  | |
+       .-------------' |
+       '---------------'
+       JSON / TEST / API`,
   },
   game: {
-    className: 'mini-project-visual',
-    cells: [
-      { text: '×', className: 'game-x' }, { text: '○', className: 'game-o' },
-      { text: '×', className: 'game-x' }, { text: '○', className: 'game-o' },
-      { text: '' }, { text: '' }, { text: '' },
-      { text: '×', className: 'game-x' }, { text: '○', className: 'game-o' },
-    ],
+    label: 'ASCII illustration of a Tic Tac Toe game',
+    art: `  0101 0011 0101 0011 0101
+       TIC TAC TOE
+      .---+---+---.
+      | X | O | X |
+      +---+---+---+
+      | O | X |   |
+      +---+---+---+
+      |   | O | X |
+      '---+---+---'
+       VUE / PLAY`,
   },
   rag: {
-    className: 'mini-project-visual rag-visual',
-    cells: [
-      { text: 'TEXT' }, { text: 'EMBED' }, { text: 'CHUNKS' },
-      { text: 'INGEST' }, { text: 'VECTOR' }, { text: 'CHROMA' },
-      { text: 'QUERY' }, { text: 'TOP-K' }, { text: 'SOURCES' },
-    ],
+    label: 'ASCII illustration of document retrieval and grounded answers',
+    art: `  0101 0010 0101 0010 0101
+       .--------.       .------.
+      / DOCUMENT/|      |VECTOR|
+     /--------/ |      '---+--'
+     | chunk  | |          |
+     | chunk  | /       .--v---.
+     '--------'        | TOP-K |
+          '----------->'---+---'
+                          |
+                    .-----v-----.
+                    | GROUNDED  |
+                    |  ANSWER   |
+                    '-----------'`,
   },
-}
-
-function ProjectVisual({ type }: { type: Exclude<ProjectVisualType, 'architecture'> }) {
-  if (type === 'scoop') {
-    return (
-      <div aria-label="ASCII ice cream truck in a Matrix-inspired code scene" className="mini-project-visual scoop-visual" role="img">
-        <pre>{`  1 0 1 0 1 0 1 0 1 0 1 0
+  scoop: {
+    label: 'ASCII ice cream truck in a Matrix-inspired code scene',
+    art: `  1 0 1 0 1 0 1 0 1 0 1 0
   | | | | | | | | | | | |
   v v v v v v v v v v v v
 
@@ -50,16 +72,16 @@ function ProjectVisual({ type }: { type: Exclude<ProjectVisualType, 'architectur
 |_________________________|
      O                O
 
-  01010011 01000011 01001111 01001111 01010000`}</pre>
-      </div>
-    )
-  }
+  01010011 01000011 01001111 01001111 01010000`,
+  },
+}
 
+function ProjectVisual({ type }: { type: Exclude<ProjectVisualType, 'architecture'> }) {
   const visual = visualContent[type]
 
   return (
-    <div aria-hidden="true" className={visual.className}>
-      {visual.cells.map((cell, index) => <span className={cell.className} key={`${cell.text}-${index}`}>{cell.text}</span>)}
+    <div aria-label={visual.label} className="mini-project-visual matrix-visual" role="img">
+      <pre>{visual.art}</pre>
     </div>
   )
 }

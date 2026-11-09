@@ -1,5 +1,26 @@
 function FeaturedProjectVisual() {
-  return <div aria-label="Illustrative architecture diagram showing the Avian Vet web app, API, assistant, and database" className="project-visual portfolio-visual"><p className="system-map-label">AVIAN VET / SYSTEM MAP</p><div className="system-map"><span>React web app</span><i /><span>FastAPI</span><i /><span>MariaDB</span><b>Care information assistant</b></div><small>Illustrative architecture · see repository docs</small></div>
+  return (
+    <div aria-label="ASCII illustration of Avian Vet's app, care assistant, API, and database" className="project-visual matrix-visual featured-matrix-visual" role="img">
+      <pre>{`  0101 0100 0101 0100 0101
+
+       .----------------.
+      /   AVIAN  VET   /|
+     /----------------/ |
+     |  React app     | |
+     '-------+--------' |
+             |          |
+      .------v-------.  |
+      | FastAPI      |  |
+      | CARE ASSIST  |  |
+      '------+-------'  |
+             |          |
+        .----v-----.    |
+        | MariaDB  |----'
+        '----------'
+
+  LOCAL RETRIEVAL / CITED INFORMATION`}</pre>
+    </div>
+  )
 }
 
 export default FeaturedProjectVisual

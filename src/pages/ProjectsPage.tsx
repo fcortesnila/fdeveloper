@@ -5,6 +5,35 @@ import PageIntro from '../components/PageIntro'
 import ProjectVisual from '../components/ProjectVisual'
 import { featuredProject, projects } from '../data/projects'
 
+type ProjectQuickReadProps = {
+  purpose: string
+  implemented: string
+  keyTechnologies: string[]
+}
+
+function ProjectQuickRead({ purpose, implemented, keyTechnologies }: ProjectQuickReadProps) {
+  return (
+    <dl className="project-quick-read">
+      <div>
+        <dt>Purpose</dt>
+        <dd>{purpose}</dd>
+      </div>
+      <div>
+        <dt>Implemented</dt>
+        <dd>{implemented}</dd>
+      </div>
+      <div>
+        <dt>Key technologies</dt>
+        <dd>
+          <ul aria-label="Key technologies" className="quick-read-tags">
+            {keyTechnologies.map((technology) => <li key={technology}>{technology}</li>)}
+          </ul>
+        </dd>
+      </div>
+    </dl>
+  )
+}
+
 function ProjectsPage() {
   return <section className="section-wrap routed-page work-page">
     <PageIntro number="01" title={<>Selected projects <em>& experiments.</em></>} subtitle="Proof of practice" />
@@ -13,8 +42,7 @@ function ProjectsPage() {
       <div className="project-copy">
         <div className="project-label"><span className="project-index">{featuredProject.number}</span> {featuredProject.category}</div>
         <h2>{featuredProject.title}</h2>
-        <p>{featuredProject.description}</p>
-        <div aria-label="Technologies used" className="tag-list">{featuredProject.technologies.map((technology) => <span key={technology}>{technology}</span>)}</div>
+        <ProjectQuickRead {...featuredProject} />
         {featuredProject.links.map((link) => <a className="project-link" href={link.href} key={link.href} rel="noreferrer" target="_blank">{link.label} <Arrow /></a>)}
         <Link className="project-link project-detail-link" to={`/projects/${featuredProject.slug}`}>Read project details <Arrow /></Link>
       </div>
@@ -26,8 +54,7 @@ function ProjectsPage() {
         <div className="mini-project-body">
           <p className="project-label"><span className="project-index">{project.number}</span> {project.category}</p>
           <h2>{project.title}</h2>
-          <p>{project.description}</p>
-          <div aria-label="Technologies used" className="tag-list">{project.technologies.map((technology) => <span key={technology}>{technology}</span>)}</div>
+          <ProjectQuickRead {...project} />
           {project.links.map((link) => <a className={`project-link${link.secondary ? ' secondary-project-link' : ''}`} href={link.href} key={link.href} rel="noreferrer" target="_blank">{link.label} <Arrow /></a>)}
           <Link className="project-link project-detail-link" to={`/projects/${project.slug}`}>Read project details <Arrow /></Link>
         </div>
