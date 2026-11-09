@@ -38,6 +38,7 @@ describe('portfolio routes', () => {
     expect(screen.getByRole('heading', { name: 'Basic Phone Directory API' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'Tic Tac Toe in Vue' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'FastAPI RAG API' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: 'Scoop' })).toBeInTheDocument()
   })
 
   it('opens a project as an article with its implementation notes', () => {
@@ -60,6 +61,17 @@ describe('portfolio routes', () => {
     expect(screen.getByRole('heading', { name: 'Local and containerized setup' })).toBeInTheDocument()
     expect(screen.getByText(/Compose exposes the API on port 8000 and stores ChromaDB data in a named volume/)).toBeInTheDocument()
     expect(within(screen.getByLabelText('Technologies used')).getByText('Docker Compose')).toBeInTheDocument()
+  })
+
+  it('shows the Scoop customer, operator, and optional AI features', () => {
+    window.location.hash = '#/projects/scoop'
+    render(<App />)
+
+    expect(screen.getByRole('heading', { name: 'Scoop' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: 'Tools for truck operators' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: 'Optional AI recommendations' })).toBeInTheDocument()
+    expect(within(screen.getByLabelText('Technologies used')).getByText('Spring Boot 3')).toBeInTheDocument()
+    expect(screen.getByRole('img', { name: 'ASCII ice cream truck in a Matrix-inspired code scene' })).toHaveTextContent('SCOOP')
   })
 
   it('shows the not-found page for an unknown project', () => {

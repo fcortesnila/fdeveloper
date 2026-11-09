@@ -7,9 +7,15 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+
 node_modules
 dist
 dist-ssr
+**/target/
 *.local
 playwright-report
 test-results

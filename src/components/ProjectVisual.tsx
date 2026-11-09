@@ -1,6 +1,6 @@
 import type { ProjectVisualType } from '../data/projects'
 
-const visualContent: Record<ProjectVisualType, { className: string; cells: { text: string; className?: string }[] }> = {
+const visualContent: Record<Exclude<ProjectVisualType, 'scoop'>, { className: string; cells: { text: string; className?: string }[] }> = {
   contacts: {
     className: 'mini-project-visual',
     cells: [
@@ -35,6 +35,26 @@ const visualContent: Record<ProjectVisualType, { className: string; cells: { tex
 }
 
 function ProjectVisual({ type }: { type: Exclude<ProjectVisualType, 'architecture'> }) {
+  if (type === 'scoop') {
+    return (
+      <div aria-label="ASCII ice cream truck in a Matrix-inspired code scene" className="mini-project-visual scoop-visual" role="img">
+        <pre>{`  1 0 1 0 1 0 1 0 1 0 1 0
+  | | | | | | | | | | | |
+  v v v v v v v v v v v v
+
+       .----------------.
+  ____/   SCOOP   /|____|\\
+ /  ICE CREAM   / | [] | \\
+/______________/__|____|__\\
+| [01] [10]       MENU    |
+|_________________________|
+     O                O
+
+  01010011 01000011 01001111 01001111 01010000`}</pre>
+      </div>
+    )
+  }
+
   const visual = visualContent[type]
 
   return (

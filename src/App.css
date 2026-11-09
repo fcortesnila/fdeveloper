@@ -53,6 +53,9 @@
 .mini-project-visual .game-x{color:#f09a70}.mini-project-visual .game-o{color:#b1dbad}
 .mini-project-visual.rag-visual>span{font-family:var(--mono);font-size:clamp(8px,1vw,12px);font-weight:600;letter-spacing:.03em}
 .mini-project-visual.rag-visual>span:nth-child(3n+2){color:#f09a70}
+.mini-project-visual.scoop-visual{display:grid;grid-template-columns:1fr;place-items:center;overflow:hidden;padding:18px;background:#020904}
+.mini-project-visual.scoop-visual pre{margin:0;color:#8cff9a;font-family:var(--mono);font-size:clamp(6px,1vw,12px);line-height:1.35;text-shadow:0 0 8px #42ff5b66;white-space:pre}
+.mini-project-visual.scoop-visual pre::selection{color:#020904;background:#8cff9a}
 
 /* Custom FCN monogram and wordmark */
 .brand-logo{display:block;width:132px;height:40px;overflow:visible;color:var(--green);transition:color .18s ease}
@@ -97,6 +100,7 @@
 .project-article{overflow:hidden;border:1px solid var(--line);background:#172019}
 .project-detail-visual .project-visual{min-height:280px}
 .project-detail-visual .mini-project-visual{min-height:280px;padding:48px 25%}
+.project-detail-visual .mini-project-visual.scoop-visual{padding:36px 12px}
 .project-article-copy{max-width:760px;padding:38px 46px 42px}
 .project-article-copy>section+section{margin-top:32px;padding-top:27px;border-top:1px solid var(--line)}
 .project-article-copy h2,.project-detail-aside h2{margin:0 0 11px;font-size:21px;font-weight:550;letter-spacing:-.04em}

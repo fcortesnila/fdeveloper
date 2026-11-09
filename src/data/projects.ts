@@ -1,4 +1,4 @@
-export type ProjectVisualType = 'contacts' | 'api' | 'game' | 'rag'
+export type ProjectVisualType = 'contacts' | 'api' | 'game' | 'rag' | 'scoop'
 
 export type ProjectLink = {
   label: string
@@ -154,5 +154,37 @@ export const projects: Project[] = [
     technologies: ['Python', 'FastAPI', 'OpenAI API', 'ChromaDB', 'Docker Compose', 'pytest'],
     links: [{ label: 'Review source & RAG API scope', href: 'https://github.com/fcortesnila/rag-api' }],
     visual: 'rag',
+  },
+  {
+    number: '06',
+    slug: 'scoop',
+    category: 'ICE CREAM TRUCK ORDERING & OPERATIONS',
+    title: 'Scoop',
+    description: 'A full-stack starter for ice-cream truck sales, combining a customer ordering experience with operator tools for orders, inventory, and truck stops. It uses Google sign-in and MariaDB-backed services, with optional AI-powered recommendations.',
+    details: [
+      {
+        heading: 'Customer ordering flow',
+        body: 'Customers can browse flavors, build a cart, place orders, and check order status through a mobile-first React app backed by a Spring Boot API.',
+      },
+      {
+        heading: 'Tools for truck operators',
+        body: 'Operator features include an order queue, walk-up orders, daily sales summaries, inventory alerts, and truck-stop management. Verified operator access is controlled by a configured email allow-list.',
+      },
+      {
+        heading: 'A containerized full-stack setup',
+        body: 'Docker Compose runs the React/Vite web app, Java 21 and Spring Boot 3 API, and MariaDB. Flyway manages the schema and starter data; the repository also includes unit tests and MariaDB integration tests.',
+      },
+      {
+        heading: 'Optional AI recommendations',
+        body: 'AI-powered inventory and route recommendations are optional. Numeric stock alerts and historical route suggestions remain available without an AI API key.',
+      },
+      {
+        heading: 'Starter project scope',
+        body: 'This repository is a software starter, not a deployed ordering service. Local development uses Google OAuth configuration, and the optional demo login is intended only for development.',
+      },
+    ],
+    technologies: ['React', 'Vite', 'Java 21', 'Spring Boot 3', 'MariaDB', 'Flyway', 'Docker Compose', 'Google OAuth', 'AI'],
+    links: [{ label: 'Review source & project scope', href: 'https://github.com/fcortesnila/scoop' }],
+    visual: 'scoop',
   },
 ]
