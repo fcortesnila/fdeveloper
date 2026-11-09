@@ -176,7 +176,7 @@ export const projects: Project[] = [
       },
       {
         heading: 'Optional AI recommendations',
-        body: 'AI-powered inventory and route recommendations are optional. Numeric stock alerts and historical route suggestions remain available without an AI API key.',
+        body: 'AI-powered inventory and route recommendations are optional and can be enabled with the IA_API_KEY environment variable. Numeric inventory alerts and historical route suggestions remain available without it.',
       },
       {
         heading: 'Starter project scope',

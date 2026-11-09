@@ -70,6 +70,7 @@ describe('portfolio routes', () => {
     expect(screen.getByRole('heading', { name: 'Scoop' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'Tools for truck operators' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'Optional AI recommendations' })).toBeInTheDocument()
+    expect(screen.getByText(/enabled with the IA_API_KEY environment variable/)).toBeInTheDocument()
     expect(within(screen.getByLabelText('Technologies used')).getByText('Spring Boot 3')).toBeInTheDocument()
     expect(screen.getByRole('img', { name: 'ASCII ice cream truck in a Matrix-inspired code scene' })).toHaveTextContent('SCOOP')
   })
