@@ -35,6 +35,27 @@ describe('portfolio routes', () => {
     expect(screen.getByRole('heading', { name: /RBC Wealth management/i })).toBeInTheDocument()
   })
 
+  it('explains the engineering-to-software connection with a concrete project example', () => {
+    render(<App />)
+
+    const navigation = within(screen.getByRole('navigation', { name: 'Main navigation' }))
+    fireEvent.click(navigation.getByRole('link', { name: 'About' }))
+
+    expect(screen.getByRole('heading', { name: 'From engineering to software' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: 'Building and checking real examples' })).toBeInTheDocument()
+    expect(screen.getByText(/In Avian Vet, I documented a clear boundary for the care-information assistant/)).toBeInTheDocument()
+    const diagramCaption = screen.getByText('Understand the system, clarify requirements, then verify the result.')
+    expect(diagramCaption.parentElement?.tagName).toBe('FIGURE')
+    const processIllustration = screen.getByRole('img', { name: 'ASCII illustration connecting electronics engineering to full-stack software and verification' })
+    expect(processIllustration).toHaveTextContent('ELECTRONICS')
+    expect(processIllustration).toHaveTextContent('FRONT')
+    expect(processIllustration).toHaveTextContent('API')
+    expect(processIllustration).toHaveTextContent('DATA')
+    expect(processIllustration).toHaveTextContent('TEST / TRACE / VERIFY')
+    expect(screen.getByText('Professional focus', { exact: false, selector: 'p' })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'LinkedIn' })).toHaveAttribute('href', 'https://www.linkedin.com/in/fcortesnila/')
+  })
+
   it('renders the project entries from portfolio data', () => {
     render(<App />)
 
