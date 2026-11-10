@@ -43,7 +43,9 @@ describe('portfolio routes', () => {
 
     expect(screen.getByRole('heading', { name: 'From engineering to software' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'Building and checking real examples' })).toBeInTheDocument()
-    expect(screen.getByText(/In Avian Vet, I documented a clear boundary for the care-information assistant/)).toBeInTheDocument()
+    expect(screen.getByText(/In Avian Vet, the care-information assistant uses local retrieval/)).toBeInTheDocument()
+    expect(screen.getByText(/I documented those limits to make clear what the starter demonstrates/)).toBeInTheDocument()
+    expect(screen.getByText(/review changes and verify behavior myself/)).toBeInTheDocument()
     const diagramCaption = screen.getByText('Understand the system, clarify requirements, then verify the result.')
     expect(diagramCaption.parentElement?.tagName).toBe('FIGURE')
     const processIllustration = screen.getByRole('img', { name: 'ASCII illustration connecting electronics engineering to full-stack software and verification' })
@@ -115,6 +117,20 @@ describe('portfolio routes', () => {
     expect(screen.getByText(/enabled with the IA_API_KEY environment variable/)).toBeInTheDocument()
     expect(within(screen.getByLabelText('Technologies used')).getByText('Spring Boot 3')).toBeInTheDocument()
     expect(screen.getByRole('img', { name: 'ASCII ice cream truck in a Matrix-inspired code scene' })).toHaveTextContent('SCOOP')
+  })
+
+  it('shows the current Tic Tac Toe gameplay and live demo links', () => {
+    window.location.hash = '#/projects/tic-tac-toe-vue'
+    render(<App />)
+
+    expect(screen.getByRole('heading', { name: 'Play a complete game' })).toBeInTheDocument()
+    expect(screen.getByText(/Players alternate X and O on a nine-cell board/)).toBeInTheDocument()
+    expect(screen.getByText(/announces turn and result updates, and offers a replay button/)).toBeInTheDocument()
+    expect(within(screen.getByLabelText('Technologies used')).getByText('Tailwind CSS')).toBeInTheDocument()
+    const projectArticle = within(screen.getByRole('article'))
+    expect(projectArticle.getByRole('link', { name: 'Play the game' })).toHaveAttribute('href', 'https://fcortesnila.github.io/ticTacToc/')
+    expect(projectArticle.getByRole('link', { name: 'View source on GitHub' })).toHaveAttribute('href', 'https://github.com/fcortesnila/ticTacToc')
+    expect(screen.queryByText(/Java terminal version/)).not.toBeInTheDocument()
   })
 
   it('shows the not-found page for an unknown project', () => {

@@ -118,24 +118,27 @@ export const projects: Project[] = [
   {
     number: '04',
     slug: 'tic-tac-toe-vue',
-    category: 'EARLIER WEB EXPERIMENT',
+    category: 'VUE BROWSER GAME',
     title: 'Tic Tac Toe in Vue',
-    description: 'A small browser game built with Vue 3 and the Composition API. The profile also includes an earlier Java terminal version, showing practice across frameworks and interfaces.',
-    purpose: 'A small browser game exploring interactive development with Vue.',
-    implemented: 'Tic Tac Toe in Vue 3 with the Composition API, alongside an earlier Java terminal version.',
-    keyTechnologies: ['Vue 3', 'JavaScript', 'Composition API'],
+    description: 'A responsive Tic Tac Toe browser game built with Vue 3, Vite, and Tailwind CSS. Players take turns on an accessible game board, with win and draw detection and a replay option.',
+    purpose: 'A quick, two-player Tic Tac Toe game in the browser.',
+    implemented: 'Turn tracking, win/draw detection, accessible cell labels, live game status, and replay after a completed game. Deployed to GitHub Pages.',
+    keyTechnologies: ['Vue 3', 'Vite', 'Tailwind CSS', 'GitHub Actions'],
     details: [
       {
-        heading: 'A small browser game',
-        body: 'This experiment implements Tic Tac Toe in Vue 3 using the Composition API, practicing interactive UI development in a different framework.',
+        heading: 'Play a complete game',
+        body: 'Players alternate X and O on a nine-cell board. The game detects winning lines and draws, announces turn and result updates, and offers a replay button once a game ends.',
       },
       {
-        heading: 'A broader learning trail',
-        body: 'The profile also includes an earlier Java terminal version of the game, showing the same small project explored through both a browser interface and a command-line interface.',
+        heading: 'Built and deployed with Vue',
+        body: 'The app uses Vue 3 with Vite and Tailwind CSS. GitHub Actions builds the site and deploys it to GitHub Pages when changes are pushed to the master branch.',
       },
     ],
-    technologies: ['Vue 3', 'JavaScript', 'Composition API'],
-    links: [{ label: 'Explore Vue repository', href: 'https://github.com/fcortesnila/ticTacToc' }],
+    technologies: ['Vue 3', 'Vite', 'Tailwind CSS', 'pnpm', 'GitHub Actions'],
+    links: [
+      { label: 'Play the game', href: 'https://fcortesnila.github.io/ticTacToc/' },
+      { label: 'View source on GitHub', href: 'https://github.com/fcortesnila/ticTacToc', secondary: true },
+    ],
     visual: 'game',
   },
   {

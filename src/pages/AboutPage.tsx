@@ -30,17 +30,17 @@ function AboutPage() {
         </figure>
       </div>
       <div className="about-copy">
-        <p className="about-lead">When a feature crosses an interface, an API, and stored data, I trace how those pieces work together before changing one. That systems view comes from electronics engineering.</p>
+        <p className="about-lead">When a feature crosses an interface, an API, and stored data, I trace how those pieces work together before changing one.</p>
 
         <section>
           <h2>From engineering to software</h2>
-          <p>I hold a bachelor’s degree in Electronics Engineering from Universidad Tecnológica de la Mixteca in Mexico and an Electronics Engineering Technician diploma from Durham College in Ontario. The same habit of understanding a whole system shapes how I approach software problems.</p>
+          <p>I’m a full-stack developer, after more than two years in frontend development. I hold a bachelor’s degree in Electronics Engineering from Universidad Tecnológica de la Mixteca in Mexico and an Electronics Engineering Technician diploma from Durham College in Ontario.</p>
         </section>
 
         <section>
           <h2>Building and checking real examples</h2>
-          <p>In Avian Vet, I documented a clear boundary for the care-information assistant: it uses local retrieval, has no external model configured, and is not clinically validated. Making those limits explicit is one practical example of designing and communicating a system carefully.</p>
-          <p>I’m a full-stack developer, after more than two years in frontend development. In personal projects, I use AI-assisted tools to explore code and implement changes, then review the diff and verify behavior myself.</p>
+          <p>In Avian Vet, the care-information assistant uses local retrieval, has no external model configured, and is neither clinically validated nor deployed. I documented those limits to make clear what the starter demonstrates—and what it does not.</p>
+          <p>For personal projects, I use AI-assisted tools, then review changes and verify behavior myself.</p>
         </section>
 
         <div className="profile-focus">
