@@ -1,3 +1,4 @@
+import profilePicture from '../assets/fercho.jfif'
 import PageIntro from '../components/PageIntro'
 
 function AboutPage() {
@@ -30,7 +31,10 @@ function AboutPage() {
         </figure>
       </div>
       <div className="about-copy">
-        <p className="about-lead">When a feature crosses an interface, an API, and stored data, I trace how those pieces work together before changing one.</p>
+        <div className="about-lead-row">
+          <p className="about-lead">When a feature crosses an interface, an API, and stored data, I trace how those pieces work together before changing one.</p>
+          <img alt="Profile portrait of Fernando Cortes Nila" className="about-profile-picture" src={profilePicture} />
+        </div>
 
         <section>
           <h2>From engineering to software</h2>

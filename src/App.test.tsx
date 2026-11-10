@@ -43,6 +43,9 @@ describe('portfolio routes', () => {
 
     expect(screen.getByRole('heading', { name: 'From engineering to software' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'Building and checking real examples' })).toBeInTheDocument()
+    const profilePicture = screen.getByRole('img', { name: 'Profile portrait of Fernando Cortes Nila' })
+    expect(profilePicture).toHaveAttribute('src', expect.stringContaining('fercho'))
+    expect(profilePicture.parentElement).toHaveClass('about-lead-row')
     expect(screen.getByText(/In Avian Vet, the care-information assistant uses local retrieval/)).toBeInTheDocument()
     expect(screen.getByText(/I documented those limits to make clear what the starter demonstrates/)).toBeInTheDocument()
     expect(screen.getByText(/review changes and verify behavior myself/)).toBeInTheDocument()

@@ -55,8 +55,16 @@
 .brand-subtitle{opacity:.72}
 @media(max-width:620px){.brand-logo{width:118px;height:36px}}
 
+.about-profile-picture{display:block;width:128px;height:128px;margin:0;border:3px solid #526a53;border-radius:50%;object-fit:cover;object-position:center}
 .about-graphic{display:block;min-height:0;padding:24px 12px;color:#8cff9a;font-family:var(--mono);font-size:clamp(7px,1.15vw,10px);font-weight:600;line-height:1.55;text-shadow:0 0 8px #42ff5b55;white-space:pre;overflow-x:auto}
 .about-method figcaption{max-width:290px}
+.about-lead-row{display:grid;grid-template-columns:minmax(0,1fr) 128px;align-items:center;gap:22px;margin-bottom:27px}
+.about-copy .about-lead-row .about-lead{margin:0}
+.about-method{width:min(100%,340px);margin-inline:auto}
+.about-method .about-graphic{width:100%;box-sizing:border-box;margin-top:0}
+@media(max-width:900px){.about-lead-row{grid-template-columns:minmax(0,1fr) 108px;gap:16px}.about-profile-picture{width:108px;height:108px}}
+@media(max-width:620px){.about-lead-row{grid-template-columns:minmax(0,1fr) 88px;gap:12px}.about-profile-picture{width:88px;height:88px}.about-method{width:min(100%,300px)}}
+@media(max-width:620px){.about-page{grid-template-columns:minmax(0,1fr)}.about-aside,.about-copy{display:contents}.about-page>.about-aside>.page-intro{grid-row:1;margin-bottom:0}.about-page>.about-copy>.about-lead-row{grid-row:2;margin-bottom:0}.about-page>.about-aside>.about-method{grid-row:3;width:min(100%,250px);margin:18px auto 28px}.about-method .about-graphic{padding:15px 8px;font-size:6px;line-height:1.35}}
 .profile-focus{margin-top:31px;padding:18px 20px;border:1px solid var(--line);background:#151f17}
 .profile-focus .section-kicker{margin-bottom:13px}
 .focus-tags{display:flex;flex-wrap:wrap;gap:8px}
