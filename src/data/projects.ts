@@ -82,7 +82,10 @@ export const projects: Project[] = [
       },
     ],
     technologies: ['React', 'Vite', 'Tailwind CSS', 'FastAPI', 'SQLite'],
-    links: [{ label: 'Review source & frontend/API scope', href: 'https://github.com/fcortesnila/phone-book' }],
+    links: [
+      { label: 'Open Phone Book', href: 'https://fcortesnila.github.io/phone-book/' },
+      { label: 'Review source & frontend/API scope', href: 'https://github.com/fcortesnila/phone-book', secondary: true },
+    ],
     visual: 'contacts',
   },
   {
