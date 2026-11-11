@@ -38,7 +38,7 @@ function AboutPage() {
 
         <section>
           <h2>From engineering to software</h2>
-          <p>I’m a full-stack developer, after more than two years in frontend development. I hold a bachelor’s degree in Electronics Engineering from Universidad Tecnológica de la Mixteca in Mexico and an Electronics Engineering Technician diploma from Durham College in Ontario.</p>
+          <p>I’ve spent two years as a frontend developer and two more as a full-stack developer. I hold a bachelor’s degree in Electronics Engineering from Universidad Tecnológica de la Mixteca in Mexico and an Electronics Engineering Technician diploma from Durham College in Ontario.</p>
         </section>
 
         <section>

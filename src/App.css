@@ -69,6 +69,30 @@
 .profile-focus .section-kicker{margin-bottom:13px}
 .focus-tags{display:flex;flex-wrap:wrap;gap:8px}
 .focus-tags span{padding:7px 9px;border:1px solid #465847;color:#c8d8c2;font-family:var(--mono);font-size:9px;letter-spacing:.025em}
+.hero-pcb{position:absolute;z-index:1;top:50%;left:50%;width:94%;height:auto;overflow:visible;transform:translate(-50%,-50%)}
+.pcb-outline{fill:#1b2a1e;stroke:#526d54;stroke-width:2;vector-effect:non-scaling-stroke}
+.pcb-trace,.pcb-component path{fill:none;stroke:#95c49a;stroke-linecap:round;stroke-linejoin:round;stroke-width:3;vector-effect:non-scaling-stroke}
+.pcb-trace-accent{stroke:#d98e66;stroke-width:2}
+.pcb-pad circle{fill:#d99a6e;stroke:#f2c39a;stroke-width:2;vector-effect:non-scaling-stroke}
+.pcb-component rect{fill:#101712;stroke:#91b996;stroke-width:2;vector-effect:non-scaling-stroke}
+.pcb-component text{fill:#d2dfc9;font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:1px}
+.pcb-component path{stroke:#d98e66;stroke-width:2}
+.pcb-component.pcb-capacitor path{stroke-width:3}
+.pcb-component.pcb-connector rect{fill:#29342a;stroke:#d99a6e}
+.pcb-component.pcb-led circle{fill:#d98e66;stroke:#f2c39a;stroke-width:2;vector-effect:non-scaling-stroke}
+.pcb-component.pcb-led .led-core{fill:#f4c27e;stroke:none}
+.pcb-dev-module .module-body{fill:#101712;stroke:#91b996;stroke-width:2;vector-effect:non-scaling-stroke}
+.pcb-dev-module .module-name{fill:#f0a77d;font-family:var(--mono);font-size:13px;font-weight:800;letter-spacing:1px}
+.pcb-dev-module .module-id{fill:#dce7d7;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:1px}
+.pcb-dev-module .module-pin{fill:none;stroke:#d99a6e;stroke-linecap:round;stroke-width:2;vector-effect:non-scaling-stroke}
+.pcb-chip .chip-body{fill:#0c120e;stroke:#d98e66;stroke-width:2;vector-effect:non-scaling-stroke}
+.pcb-chip .chip-inset{fill:#142019;stroke:#536f54;stroke-width:1.5;vector-effect:non-scaling-stroke}
+.pcb-chip .chip-pin{fill:none;stroke:#d99a6e;stroke-linecap:round;stroke-width:3;vector-effect:non-scaling-stroke}
+.pcb-chip .chip-mark{fill:#a8e0ad;font-family:Arial,Helvetica,sans-serif;font-size:54px;font-weight:800;letter-spacing:1px}
+.pcb-chip .chip-label{fill:#c4d5c0;font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:1px}
+.pcb-chip .chip-pin-one{fill:#d98e66}
+.pcb-screw-holes circle{fill:#101712;stroke:#61785d;stroke-width:2;vector-effect:non-scaling-stroke}
+@media(max-width:620px){.hero-pcb{width:100%}}
 
 /* LinkedIn verified experience, education, and recognition */
 .education-card{grid-template-columns:.8fr 1.2fr;align-items:start;gap:20px 30px}
@@ -83,6 +107,7 @@
 .profile-source{margin:25px 0 0}
 .profile-source .text-link{color:#d4e58e}
 @media(max-width:620px){.education-card{grid-template-columns:1fr;gap:14px}.education-card .section-kicker,.education-item{grid-column:1;grid-row:auto}.recognition-card{grid-template-columns:1fr;gap:12px}.recognition-card .section-kicker{grid-column:1;grid-row:auto}}
+.experience-page>.section-wrap{padding-block:0}
 .secondary-project-link{margin-top:8px;padding-top:3px}
 
 /* Compact, role-focused contact CTA */

@@ -12,6 +12,12 @@ describe('portfolio routes', () => {
     render(<App />)
 
     expect(screen.getByRole('heading', { name: /full-stack software/i })).toBeInTheDocument()
+    expect(screen.getByRole('img', { name: /PCB-inspired circuit board with a central microcontroller/i })).toBeInTheDocument()
+    expect(screen.getByText('FCN')).toBeInTheDocument()
+    expect(screen.getByText('FRONTEND')).toBeInTheDocument()
+    expect(screen.getByText('API')).toBeInTheDocument()
+    expect(screen.getByText('DATA')).toBeInTheDocument()
+    expect(screen.getByText('TESTS')).toBeInTheDocument()
     expect(screen.getByRole('navigation', { name: 'Main navigation' })).toBeInTheDocument()
   })
 
@@ -43,6 +49,7 @@ describe('portfolio routes', () => {
 
     expect(screen.getByRole('heading', { name: 'From engineering to software' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'Building and checking real examples' })).toBeInTheDocument()
+    expect(screen.getByText(/two years as a frontend developer and two more as a full-stack developer/)).toBeInTheDocument()
     const profilePicture = screen.getByRole('img', { name: 'Profile portrait of Fernando Cortes Nila' })
     expect(profilePicture).toHaveAttribute('src', expect.stringContaining('fercho'))
     expect(profilePicture.parentElement).toHaveClass('about-lead-row')
