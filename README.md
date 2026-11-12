@@ -7,22 +7,22 @@ React Router provides Home, Work, Experience, About, and Contact routes. Hash-ba
 ## Getting started
 
 ```sh
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 ## Build
 
 ```sh
-npm run build
-npm run preview
+pnpm build
+pnpm preview
 ```
 
 ## Test and lint
 
 ```sh
-npm test
-npm run lint
+pnpm test
+pnpm lint
 ```
 
 ## End-to-end tests
@@ -30,8 +30,8 @@ npm run lint
 Install the Playwright Chromium browser once, then run the browser tests:
 
 ```sh
-npx playwright install chromium
-npm run test:e2e
+pnpm exec playwright install chromium
+pnpm test:e2e
 ```
 
-The Playwright config starts the Vite development server automatically. GitHub Actions installs Chromium and runs these tests alongside the unit tests, lint, and production build on pushes and pull requests.
+The Playwright config starts the Vite development server automatically. The single GitHub Actions workflow installs Chromium and runs these tests alongside the unit tests, lint, and production build on pushes and pull requests, then deploys successful builds from `main` to GitHub Pages.
