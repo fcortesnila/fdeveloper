@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122 80" fill="none">
+  <rect x="9" y="10" width="104" height="60" rx="4" fill="#19241b" stroke="#8fc49a" stroke-width="3" />
+  <rect x="16" y="17" width="90" height="46" rx="2" fill="#8fc49a" />
+  <text x="61" y="47" fill="#101611" font-family="Consolas, 'Courier New', monospace" font-size="24" font-weight="700" letter-spacing="2" text-anchor="middle">FCN</text>
+  <g stroke="#8fc49a" stroke-width="2.5" stroke-linecap="round">
+    <path d="M27 70v5M41 70v5M55 70v5M67 70v5M81 70v5M95 70v5" />
+  </g>
+  <g fill="#8fc49a">
+    <circle cx="27" cy="77" r="1.5" />
+    <circle cx="41" cy="77" r="1.5" />
+    <circle cx="55" cy="77" r="1.5" />
+    <circle cx="67" cy="77" r="1.5" />
+    <circle cx="81" cy="77" r="1.5" />
+    <circle cx="95" cy="77" r="1.5" />
+  </g>
+  <g stroke="#8fc49a" stroke-width="2.5" stroke-linecap="round">
+    <path d="M27 5v5M41 5v5M55 5v5M67 5v5M81 5v5M95 5v5" />
+  </g>
+  <g fill="#8fc49a">
+    <circle cx="27" cy="3" r="1.5" />
+    <circle cx="41" cy="3" r="1.5" />
+    <circle cx="55" cy="3" r="1.5" />
+    <circle cx="67" cy="3" r="1.5" />
+    <circle cx="81" cy="3" r="1.5" />
+    <circle cx="95" cy="3" r="1.5" />
+  </g>
+</svg>

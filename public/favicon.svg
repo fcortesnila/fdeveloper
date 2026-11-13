@@ -1,7 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="15" fill="#101611"/>
-  <path d="M32 5.5 55 18.75v26.5L32 58.5 9 45.25v-26.5L32 5.5Z" fill="#19241b" stroke="#8fc49a" stroke-width="2" stroke-linejoin="round"/>
-  <path d="M23 43V21h19v5H29v4h11v5H29v8h-6Z" fill="#edf1e7"/>
-  <circle cx="51" cy="15" r="3" fill="#f09a70"/>
-  <circle cx="13" cy="48" r="2.5" fill="#f09a70"/>
+  <rect width="64" height="64" rx="15" fill="#101611" />
+  <rect x="5" y="16" width="54" height="32" rx="3" fill="#19241b" stroke="#8fc49a" stroke-width="2" />
+  <rect x="9" y="20" width="46" height="24" rx="1" fill="#8fc49a" />
+  <text x="32" y="37" fill="#101611" font-family="Consolas, 'Courier New', monospace" font-size="13" font-weight="700" letter-spacing="1" text-anchor="middle">FCN</text>
+  <g stroke="#8fc49a" stroke-width="1.5" stroke-linecap="round">
+    <path d="M16 48v4M24 48v4M32 48v4M40 48v4M48 48v4" />
+  </g>
+  <g fill="#8fc49a">
+    <circle cx="16" cy="53" r="1" />
+    <circle cx="24" cy="53" r="1" />
+    <circle cx="32" cy="53" r="1" />
+    <circle cx="40" cy="53" r="1" />
+    <circle cx="48" cy="53" r="1" />
+  </g>
+  <g stroke="#8fc49a" stroke-width="1.5" stroke-linecap="round">
+    <path d="M16 12v4M24 12v4M32 12v4M40 12v4M48 12v4" />
+  </g>
+  <g fill="#8fc49a">
+    <circle cx="16" cy="11" r="1" />
+    <circle cx="24" cy="11" r="1" />
+    <circle cx="32" cy="11" r="1" />
+    <circle cx="40" cy="11" r="1" />
+    <circle cx="48" cy="11" r="1" />
+  </g>
 </svg>

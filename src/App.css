@@ -50,10 +50,9 @@
 .featured-matrix-visual{padding:28px;background-image:radial-gradient(ellipse at 74% 70%,#42ff5b18 0,transparent 42%),linear-gradient(135deg,#07150a,#020904)}
 
 /* Custom FCN monogram and wordmark */
-.brand-logo{display:block;width:132px;height:40px;overflow:visible;color:var(--green);transition:color .18s ease}
-.wordmark:hover .brand-logo{color:#b1dbad}
-.brand-subtitle{opacity:.72}
-@media(max-width:620px){.brand-logo{width:118px;height:36px}}
+.brand-logo{display:block;width:74px;height:49px;transition:opacity .18s ease}
+.wordmark:hover .brand-logo{opacity:.82}
+@media(max-width:620px){.brand-logo{width:66px;height:44px}}
 
 .about-profile-picture{display:block;width:128px;height:128px;margin:0;border:3px solid #526a53;border-radius:50%;object-fit:cover;object-position:center}
 .about-graphic{display:block;min-height:0;padding:24px 12px;color:#8cff9a;font-family:var(--mono);font-size:clamp(7px,1.15vw,10px);font-weight:600;line-height:1.55;text-shadow:0 0 8px #42ff5b55;white-space:pre;overflow-x:auto}
